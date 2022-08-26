@@ -3,8 +3,8 @@
         "PolyListen": true
     },
   "79": {
-        "TxListen": false,
-        "TxCommit": false,
+        "TxListen": true,
+        "TxCommit": true,
         "PolyCommit": true,
         "HeaderSync": true
     }

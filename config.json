@@ -45,8 +45,8 @@
               "https://data-seed-prebsc-1-s1.binance.org:8545/"
           ],
           "CheckFee": false,
-          "CCMContract": "0x55Fc9a3cfA7BcE98BEeF143c7d7F4Df3A29a626D",
-          "CCDContract": "0xbbB20c5Cda51d6CBe60CAd7721d08bAEAAaf480A",
+          "CCMContract": "0xE97DC6C8da695606a833878620DC8551635dfaB2",
+          "CCDContract": "0x172e8c9DD5eD74865C332D4d3889676dE7654B31",
           "Wallet": {
               "KeyStoreProviders": [
                   {
