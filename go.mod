@@ -16,3 +16,5 @@ require (
 	github.com/polynetwork/poly v1.7.3-0.20210804073726-5d4f4d4a9371
 	github.com/urfave/cli/v2 v2.3.0
 )
+
+replace github.com/devfans/zion-sdk v0.0.3 => github.com/randy75828/zion-sdk v0.0.3-patched

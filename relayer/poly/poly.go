@@ -207,7 +207,7 @@ func (s *Submitter) SubmitHeaders(chainId uint64, headers [][]byte) (hash string
 	if err != nil {
 		return
 	}
-	hash, err = s.wallet.SendWithAccount(*s.signer, utils.HeaderSyncContractAddress, big.NewInt(0), 0, nil, nil, data)
+	hash, err = s.wallet.SendWithAccount(*s.signer, utils.HeaderSyncContractAddress, big.NewInt(0), 30000000, nil, nil, data)
 	if err != nil && !strings.Contains(err.Error(), "already known") {
 		return
 	}
@@ -564,10 +564,10 @@ COMMIT:
 		case header, ok := <-ch:
 			if ok {
 				hdr = &header
-				if len(headers) > 0 && height != header.Height - 1 {
-                                        log.Info("Resetting header set", "chain", s.sync.ChainId, "height", height, "current_height", header.Height)
-                                        headers = [][]byte{}
-                                }
+				if len(headers) > 0 && height != header.Height-1 {
+					log.Info("Resetting header set", "chain", s.sync.ChainId, "height", height, "current_height", header.Height)
+					headers = [][]byte{}
+				}
 				height = header.Height
 				if hdr.Data == nil {
 					// Update header sync height

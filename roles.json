@@ -1,0 +1,11 @@
+{
+    "0": {
+        "PolyListen": true
+    },
+  "79": {
+        "TxListen": false,
+        "TxCommit": false,
+        "PolyCommit": true,
+        "HeaderSync": true
+    }
+}

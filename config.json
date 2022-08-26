@@ -1,0 +1,92 @@
+{
+  "Env": "devnet",
+  "Bus": {
+      "Config": {
+          "Addr": "127.0.0.1:6379"
+      },
+      "HeightUpdateInterval": 10
+  },
+  "Poly": {
+      "Nodes": [
+          "http://127.0.0.1:8545",
+          "http://127.0.0.1:8546",
+          "http://127.0.0.1:8547",
+          "http://127.0.0.1:8548"
+      ],
+      "Wallet": {
+          "KeyStoreProviders": [
+              {
+                  "Path": "./keystore/zion", 
+                  "Passwords": {
+                      "0x258af48e28e4a6846e931ddff8e1cdf8579821e5": "" 
+                  }
+              }
+          ]
+      }
+  },
+  "Bridge": [
+      "https://bridge.poly.network/testnet/v1"
+  ],
+  "Port": 8545,
+  "ValidMethods": [
+      "add",
+      "remove",
+      "swap",
+      "unlock",
+      "addExtension",
+      "removeExtension",
+      "registerAsset",
+      "onCrossTransfer",
+      "depositCCIn"
+  ],
+  "Chains": {
+      "79": {
+          "Nodes": [
+              "https://data-seed-prebsc-1-s1.binance.org:8545/"
+          ],
+          "CheckFee": false,
+          "CCMContract": "0x55Fc9a3cfA7BcE98BEeF143c7d7F4Df3A29a626D",
+          "CCDContract": "0xbbB20c5Cda51d6CBe60CAd7721d08bAEAAaf480A",
+          "Wallet": {
+              "KeyStoreProviders": [
+                  {
+                      "Path": "./keystore/bsc", 
+                      "Passwords": {
+                          "0x1E9Eb8d2320A52DCD91A4016b1471947844ed903": "" 
+                      }
+
+                  }
+              ]
+          },
+          "HeaderSync": {
+              "Batch": 40,
+              "Poly": {
+                  "Wallet": {
+                      "KeyStoreProviders": [
+                          {
+                              "Path": "./keystore/zion", 
+                              "Passwords": {
+                                  "0x258af48e28e4a6846e931ddff8e1cdf8579821e5": "" 
+                              }
+                          }
+                      ]
+                  }
+              }
+          },
+          "SrcTxCommit": {
+              "Poly": {
+                  "Wallet": {
+                      "KeyStoreProviders": [
+                          {
+                              "Path": "./keystore/zion", 
+                              "Passwords": {
+                                  "0x258af48e28e4a6846e931ddff8e1cdf8579821e5": "" 
+                              }
+                          }
+                      ]
+                  }
+              }
+          }
+      }
+  }
+}
